@@ -1,0 +1,86 @@
+
+$fontsize: 1.2rem;
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu',
+    'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #c2e4ef;
+}
+
+.App {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  height: 100vh;
+
+  h2 {
+    color: #556581;
+    font-size: 2rem;
+    margin: 0;
+  }
+
+  h1 {
+    color: #000;
+    font-size: 7rem;
+    margin: 0;
+    margin-bottom: 20px;
+
+    &.plus {
+      color: #2A9D8F;
+    }
+
+    &.minus {
+      color: #e63946;
+    }
+  }
+
+  button {
+    background: transparent;
+    border: 2px solid transparent;
+    text-align: center;
+    font-size: 22px;
+    border-radius: 15px;
+    padding: 20px;
+    margin: 10px;
+    cursor: pointer;
+    transition: all 0.05s ease-in-out;
+
+    &.plus {
+      background-color: #2A9D8F;
+      color: #fff;
+      box-shadow: 0 4px 0 darken(#2a9d8f, 15%);
+      border: 1px solid darken(#2a9d8f, 10%);
+      font-size: $fontsize;
+    }
+
+    &.minus {
+      background-color: #E63946;
+      color: #fff;
+      box-shadow: 0 4px 0 darken(#e63946, 10%);
+      border: 1px solid darken(#e63946, 15%);
+      font-size: $fontsize;
+    }
+
+
+    &.reset {
+      background-color: #13453f;
+      font-size: $fontsize;
+      box-shadow: 0 4px 0 darken(#13453f, 15%);
+      border: 1px solid darken(#13453f, 10%);
+      color: #fff;
+    }
+
+    &:hover {
+      transform: translateY(-2px);
+    }
+
+    &:active {
+      transform: translateY(2px);
+      box-shadow: none;
+    }
+  }
+}
